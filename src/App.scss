@@ -1,0 +1,153 @@
+$color-blue: #3178C6;
+$color-gray-700: #344054;
+$color-gray-400: #98A2B3;
+$color-gray-300: #D0D5DD;
+
+.loginPage-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: calc(100vh);
+
+  &__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-blue;
+  }
+
+  &__imgBox{
+    width: 100%;
+  }
+  &__img{
+    width: 100%;
+  }
+
+  &__right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ant-form-item-label label{
+      font-size: 16px;
+      line-height: 24.2px;
+    }
+    .ant-input::placeholder {
+      font-size: 16px;
+      color: $color-gray-400;
+      line-height: 24px;
+    }
+    .ant-input-affix-wrapper {
+      height: 45px;
+    }
+    .ant-input-suffix span svg{
+      width: 22px;
+      height: 22px;
+    }
+    .ant-btn-primary{
+      height: 45px;
+      background-color: $color-blue;
+    }
+  }
+
+  &__formBox{
+    width: 421px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__title{
+    font-size: 32px;
+    color: $color-gray-700;
+    padding-bottom: 20px;
+  }
+}
+
+.app{
+  width: 100%;
+  height: 100vh;
+
+  .mainPage-container {
+    display: grid;
+    grid-template-rows: 60px calc(100vh - 60px);
+    grid-template-columns: minmax(244px, max-content) 1fr;
+
+    .sidebar-container {
+      grid-row: 1 / -1;
+      grid-column: 1 / 2;
+      border-right: 1px solid $color-gray-300;
+
+      &__title{
+        padding:22px 40px;
+        margin-bottom: 0;
+      }
+
+      &__list{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      &__item{
+        width: 205px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        border-radius: 6px;
+      }
+
+
+
+      &__icon{
+        width: 24px;
+        height: 24px;
+        color: $color-gray-700;
+      }
+
+      &__span{
+        font-size: 16px;
+        color: $color-gray-700;
+        margin-left: 12px;
+      }
+
+      .active{
+        background-color: $color-blue;
+        .sidebar-container{
+          &__icon{
+            color: #fff;
+          }
+          &__span{
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .header-container {
+      grid-row: 1 / 2;
+      grid-column: 2 / -1;
+      border-bottom: 1px solid $color-gray-300;
+
+      display: grid;
+      grid-template-columns: 1fr  max-content;
+      grid-gap: 20px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+    }
+    .user-container {
+      width: 40px;
+      height: 40px;
+      background-color: $color-gray-300;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
