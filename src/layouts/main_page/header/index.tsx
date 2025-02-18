@@ -5,16 +5,18 @@ import {useNavigate} from "react-router-dom";
 import {User} from "../../../components/user";
 
 
-type Props = {
+type Props = {};
 
-};
 export const Header:FC<Props> = ({}):React.JSX.Element => {
+
     const navigate = useNavigate();
+
     const logout = () => {
         localStorage.removeItem("USER_DATA")
         localStorage.removeItem("isAuth");
         navigate("/")
     }
+
     return (
         <div className="header-container">
             <div></div>

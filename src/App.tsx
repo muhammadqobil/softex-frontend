@@ -1,17 +1,20 @@
-import {BrowserRouter} from "react-router-dom";
 import './App.scss';
-import {useState} from "react";
 import {Login} from "./pages/login";
 import {RoutesComponent} from "./routes";
+import {useEffect} from "react";
+import {useNavigate} from "react-router-dom";
 
 function App() {
+
+    const navigate = useNavigate();
     const isAuth = JSON.parse(localStorage.getItem("isAuth") || "false") as boolean;
-    console.log(isAuth)
+
+    useEffect(() => {
+        navigate('/');
+    }, []);
+
   return (
-      isAuth ?
-          <BrowserRouter>
-            <RoutesComponent/>
-          </BrowserRouter> : <Login/>
+      isAuth ? <RoutesComponent/>  : <Login/>
   );
 }
 

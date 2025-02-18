@@ -2,25 +2,32 @@ import React, {FC} from "react";
 import logo from '../../assets/tsLogo.png';
 import user from "../../assets/user-02.svg"
 import {Button, Col, Form, Input, Row} from "antd";
-import {Link} from "react-router-dom";
-type Props = {
+import {useNavigate} from "react-router-dom";
 
-};
+type Props = {};
 
 type AuthType = {
     username: string;
     password: string;
 }
-export const Login:FC<Props> = ({}):React.JSX.Element => {
+
+export const Login:FC<Props> = ():React.JSX.Element => {
+
+    const navigate = useNavigate();
+
     const onFinish = async (values: AuthType) => {
         try {
             localStorage.setItem("USER_DATA", JSON.stringify(values));
             localStorage.setItem("isAuth", JSON.stringify(true));
 
-        }catch (err:any){
+            return navigate('/');
+
+        } catch (err:any) {
             console.log(err)
         }
     }
+
+
     return (
         <div className="loginPage-container">
             <div className="loginPage-container__left">
