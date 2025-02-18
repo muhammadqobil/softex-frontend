@@ -7,7 +7,7 @@ import {User} from "../../../components/user";
 
 type Props = {};
 
-export const Header:FC<Props> = ({}):React.JSX.Element => {
+export const Header:FC<Props> = ():React.JSX.Element => {
 
     const navigate = useNavigate();
 
