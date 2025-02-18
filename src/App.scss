@@ -8,7 +8,7 @@ $color-gray-300: #D0D5DD;
   grid-template-columns: 60% 40%;
   grid-template-rows: calc(100vh);
 
-  &__left{
+  &__left {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,47 +16,52 @@ $color-gray-300: #D0D5DD;
     background-color: $color-blue;
   }
 
-  &__imgBox{
-    width: 100%;
-  }
-  &__img{
+  &__imgBox {
     width: 100%;
   }
 
-  &__right{
+  &__img {
+    width: 100%;
+  }
+
+  &__right {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .ant-form-item-label label{
+    .ant-form-item-label label {
       font-size: 16px;
       line-height: 24.2px;
     }
+
     .ant-input::placeholder {
       font-size: 16px;
       color: $color-gray-400;
       line-height: 24px;
     }
+
     .ant-input-affix-wrapper {
       height: 45px;
     }
-    .ant-input-suffix span svg{
+
+    .ant-input-suffix span svg {
       width: 22px;
       height: 22px;
     }
-    .ant-btn-primary{
+
+    .ant-btn-primary {
       height: 45px;
       background-color: $color-blue;
     }
   }
 
-  &__formBox{
+  &__formBox {
     width: 421px;
     justify-items: center;
     align-items: center;
   }
 
-  &__title{
+  &__title {
     font-size: 32px;
     color: $color-gray-700;
     padding-bottom: 20px;
@@ -77,7 +82,7 @@ $color-gray-300: #D0D5DD;
     grid-template-columns: 1fr;
     grid-template-rows: calc(100vh);
 
-    &__left{
+    &__left {
       display: none;
     }
   }
@@ -92,11 +97,12 @@ $color-gray-300: #D0D5DD;
   cursor: pointer;
   transition: all 0.3s;
 }
-.ant-pagination-options{
+
+.ant-pagination-options {
   display: none !important;
 }
 
-.app{
+.app {
   width: 100%;
   height: 100vh;
 
@@ -110,12 +116,12 @@ $color-gray-300: #D0D5DD;
       grid-column: 1 / 2;
       border-right: 1px solid $color-gray-300;
 
-      &__title{
-        padding:22px 40px;
+      &__title {
+        padding: 22px 40px;
         margin-bottom: 0;
       }
 
-      &__list{
+      &__list {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -124,7 +130,7 @@ $color-gray-300: #D0D5DD;
         gap: 12px;
       }
 
-      &__item{
+      &__item {
         width: 205px;
         height: 45px;
         cursor: pointer;
@@ -133,13 +139,15 @@ $color-gray-300: #D0D5DD;
         padding: 0 15px;
         border-radius: 6px;
 
-        &:hover{
+        &:hover {
           background-color: $color-blue;
-          .sidebar-container{
-            &__icon{
+
+          .sidebar-container {
+            &__icon {
               color: #fff;
             }
-            &__span{
+
+            &__span {
               color: #fff;
             }
           }
@@ -147,26 +155,27 @@ $color-gray-300: #D0D5DD;
       }
 
 
-
-      &__icon{
+      &__icon {
         width: 24px;
         height: 24px;
         color: $color-gray-700;
       }
 
-      &__span{
+      &__span {
         font-size: 16px;
         color: $color-gray-700;
         margin-left: 12px;
       }
 
-      .active{
+      .active {
         background-color: $color-blue;
-        .sidebar-container{
-          &__icon{
+
+        .sidebar-container {
+          &__icon {
             color: #fff;
           }
-          &__span{
+
+          &__span {
             color: #fff;
           }
         }
@@ -185,6 +194,7 @@ $color-gray-300: #D0D5DD;
       justify-content: center;
       padding: 0 20px;
     }
+
     .user-container {
       width: 40px;
       height: 40px;
@@ -196,13 +206,13 @@ $color-gray-300: #D0D5DD;
       cursor: pointer;
     }
 
-    .main-container{
+    .main-container {
       .post-container {
         height: calc(100vh - 60px - 20px);
         overflow: hidden;
         padding: 10px;
 
-        &__table{
+        &__table {
           overflow-y: auto;
           border: 1px solid $color-gray-300;
           border-radius: 6px;
