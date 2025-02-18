@@ -63,6 +63,26 @@ $color-gray-300: #D0D5DD;
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .loginPage-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: calc(100vh);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .loginPage-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: calc(100vh);
+
+    &__left{
+      display: none;
+    }
+  }
+}
+
 .pagination-btn {
   display: flex;
   align-items: center;

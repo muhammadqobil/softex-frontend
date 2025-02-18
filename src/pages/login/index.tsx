@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import logo from '../../assets/tsLogo.png';
 import user from "../../assets/user-02.svg"
-import {Button, Col, Form, Input, Row} from "antd";
+import {Button, Col, Form, Input, message, Row} from "antd";
 import {useNavigate} from "react-router-dom";
 
 type Props = {};
@@ -17,10 +17,14 @@ export const Login:FC<Props> = ():React.JSX.Element => {
 
     const onFinish = async (values: AuthType) => {
         try {
-            localStorage.setItem("USER_DATA", JSON.stringify(values));
-            localStorage.setItem("isAuth", JSON.stringify(true));
+            if (values.username && values.password) {
+                localStorage.setItem("USER_DATA", JSON.stringify(values));
+                localStorage.setItem("isAuth", JSON.stringify(true));
 
-            return navigate('/');
+                return navigate('/');
+            }else {
+                message.error("Login yoki parol kiritilmadi")
+            }
 
         } catch (err:any) {
             console.log(err)
